@@ -20,6 +20,11 @@
     border: 1px solid rgb(133, 133, 133);
 }
 
+
+.slideshow__container {
+    position: relative;
+}
+
 .slideshow {
     max-width: var(--slideshow-max-width);
     height: var(--slideshow-height);
@@ -34,6 +39,12 @@
             width: 100%;
             transform: translateX(var(--img-distance-X));
         }
+    }
+
+    &__pagination {
+        display:flex;
+        position: absolute;
+        bottom: -2rem;
     }
 }
 

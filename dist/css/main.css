@@ -10,6 +10,10 @@
   border: 1px solid #858585;
 }
 
+.slideshow__container {
+  position: relative;
+}
+
 .slideshow {
   max-width: var(--slideshow-max-width);
   height: var(--slideshow-height);
@@ -23,6 +27,11 @@
   position: absolute;
   width: 100%;
   transform: translateX(var(--img-distance-X));
+}
+.slideshow__pagination {
+  display: flex;
+  position: absolute;
+  bottom: -2rem;
 }
 
 .animation__in {
