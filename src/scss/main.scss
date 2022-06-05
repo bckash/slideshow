@@ -1,57 +1,52 @@
 
-// for best performance:
-// ---------------------
+// 1. set the ":root" variables:
+//---------------------------------------
 
-// 1. set all img to one size
-// 2. set 
+//  note that :  |--img-distance-X| && |--img-distance-X-minus| === --slideshow-max-width
 
-$img-container-width: 80rem;
-$img-container-height: 20rem;
-$slider-delay: 5s;
+// also : "--animation-out-delay" should be the same value as "time" in "slideshow()" in .js
+
+:root {
+    --slideshow-max-width: 80rem;
+    --slideshow-height: 20rem;
+    --img-distance-X: 80rem;
+    --img-distance-X-minus: -80rem;
+    --animation-out-delay: 5000ms;
+}
+
+// ------------------------------------------
 
 .br {
     border: 1px solid rgb(133, 133, 133);
 }
 
 .slideshow {
-    width: max-content;
+    max-width: var(--slideshow-max-width);
+    height: var(--slideshow-height);
     margin: auto;
+    overflow: hidden;
 
     &__showcase {
         position: relative;
-        max-width: 80rem;
-        height: auto;
-        overflow: hidden;
 
-        & .slides {
-            width: 100%;
+        & img {
             position: absolute;
-            top: 0;
-            transform: translateX(80rem);
-            z-index: 10;
-        
-
+            width: 100%;
+            transform: translateX(var(--img-distance-X));
         }
     }
 }
 
-#nonvisible-responsive-fix {
-    width: 100%;
-    opacity: 0;
-    max-width: 80rem;
-    height: auto;
-}
-
 .animation__in {
-    animation: in 1s forwards, out 1s 5s forwards;
+    animation: in 1s forwards, out 1s var(--animation-out-delay) forwards;
 }
 
 @keyframes out {
     from {transform: translateX(0);}
-    to {transform: translateX(-80rem)}
+    to {transform: translateX(var(--img-distance-X-minus))}
 }
 
 @keyframes in {
-    from {transform: translateX(80rem);}
+    from {transform: translateX(var(--img-distance-X));}
     to {transform: translateX(0rem)}
 }
