@@ -1,4 +1,10 @@
 
+// for best performance:
+// ---------------------
+//
+// 1. set all img to one size
+// 2. set 
+
 const imgShow1 = document.getElementById("show-img-1")
 const imgShow2 = document.getElementById("show-img-2")
 const imgShow3 = document.getElementById("show-img-3")
