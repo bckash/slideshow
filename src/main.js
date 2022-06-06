@@ -115,6 +115,6 @@ function responsiveWidth() {
 // start value for slideshow container, if <= window width 
 responsiveWidth()
 
-// run slideshow
+// run slideshow. "time" should have the same value as "--animation-out-delay" in CSS
 slideShowAbstract(imgParArray, animations, 5000)
 
