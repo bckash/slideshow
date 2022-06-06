@@ -25,6 +25,13 @@
   transform: translateX(var(--img-distance-X));
 }
 
+.pagination {
+  text-align: center;
+}
+.pagination span {
+  font-size: 3rem;
+}
+
 .animation__in {
   animation: in 1s forwards, out 1s var(--animation-out-delay) forwards;
 }
