@@ -11,23 +11,25 @@
 </head>
 <body>
     
+    <!-- number of "img" images and "span" paginations can be increased and it will be reflected in .js -->
+
     <section>
-        <div id="slideshow" class="slideshow br">
+        <div id="slideshow" class="slideshow">
+            <!-- for best performance images dimensions should be in (--slideshow-max-width) / (--slideshow-height) ratio -->
             <div class="slideshow__showcase">
-                <!-- 0. images dimensions should be in (--slideshow-max-width)/(--slideshow-height) ratio -->
-                <img id="show-img-1" src="img/14-dl-1.jpg" alt="">
-                <img id="show-img-2" src="img/14-dl-2.jpg" alt="">
-                <img id="show-img-3" src="img/14-dl-3.jpg" alt="">
-            </div>>
+                <img class="show-images" src="img/14-dl-1.jpg" alt="">
+                <img class="show-images" src="img/14-dl-2.jpg" alt="">
+                <img class="show-images" src="img/14-dl-3.jpg" alt="">
+            </div>
         </div>
         <div class="pagination">
-            <span class="material-icons">
+            <span class="material-icons pag-icons">
                 maximize
             </span>
-            <span class="material-icons">
+            <span class="material-icons pag-icons">
                 maximize
             </span>
-            <span class="material-icons">
+            <span class="material-icons pag-icons">
                 maximize
             </span>
         </div>

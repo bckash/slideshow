@@ -4,10 +4,8 @@
   --img-distance-X: 80rem;
   --img-distance-X-minus: -80rem;
   --animation-out-delay: 5000ms;
-}
-
-.br {
-  border: 1px solid #858585;
+  --pag-active: rgb(223, 223, 223);
+  --pag-non-active: rgb(241, 241, 241);
 }
 
 .slideshow {
@@ -15,6 +13,7 @@
   height: var(--slideshow-height);
   margin: auto;
   overflow: hidden;
+  border-radius: 20px;
 }
 .slideshow__showcase {
   position: relative;
@@ -23,13 +22,6 @@
   position: absolute;
   width: 100%;
   transform: translateX(var(--img-distance-X));
-}
-
-.pagination {
-  text-align: center;
-}
-.pagination span {
-  font-size: 3rem;
 }
 
 .animation__in {
@@ -50,6 +42,35 @@
   }
   to {
     transform: translateX(0rem);
+  }
+}
+.pagination {
+  text-align: center;
+}
+.pagination span {
+  color: var(--pag-non-active);
+  font-size: 3rem;
+}
+.pagination span:hover {
+  cursor: default;
+}
+
+.animation__pagination {
+  animation: pagination var(--animation-out-delay);
+}
+
+@keyframes pagination {
+  0% {
+    color: var(--pag-non-active);
+  }
+  3% {
+    color: var(--pag-active);
+  }
+  97% {
+    color: var(--pag-active);
+  }
+  100% {
+    color: var(--pag-non-active);
   }
 }
 
