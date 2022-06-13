@@ -1,0 +1,73 @@
+
+
+// for best performance : [1] |--img-distance-X| && |--img-distance-X-minus| === --slideshow-max-width . also [2] "--animation-out-delay" should have the same value as "time" in "slideshowAbstract()" in .js
+
+
+// VARIABLES
+:root {
+    --slideshow-max-width: 80rem;
+    --slideshow-height: 20rem;
+    --img-distance-X: 80rem;
+    --img-distance-X-minus: -80rem;
+    --animation-out-delay: 5000ms;
+    --pag-active: rgb(223, 223, 223);
+    --pag-non-active: rgb(241, 241, 241);
+}
+
+// SLIDESHOW
+.slideshow {
+    max-width: var(--slideshow-max-width);
+    height: var(--slideshow-height);
+    margin: auto;
+    overflow: hidden;
+    border-radius: 20px;
+
+    &__showcase {
+        position: relative;
+
+        & img {
+            position: absolute;
+            width: 100%;
+            transform: translateX(var(--img-distance-X));
+        }
+    }
+}
+
+.animation__in {
+    animation: in 1s forwards, out 1s var(--animation-out-delay) forwards;
+}
+
+@keyframes out {
+    from {transform: translateX(0);}
+    to {transform: translateX(var(--img-distance-X-minus))}
+}
+
+@keyframes in {
+    from {transform: translateX(var(--img-distance-X));}
+    to {transform: translateX(0rem)}
+}
+
+// PAGINATION
+.pagination {
+    text-align: center;
+
+    & span {
+        color: var(--pag-non-active);
+        font-size: 3rem;
+    }
+
+    & span:hover {
+        cursor:default;
+    }
+}
+
+.animation__pagination {
+    animation: pagination var(--animation-out-delay);
+}
+
+@keyframes pagination {
+    0% {color: var(--pag-non-active)}
+    3% {color: var(--pag-active)}
+    97% {color: var(--pag-active);}
+    100% {color: var(--pag-non-active);}
+}
