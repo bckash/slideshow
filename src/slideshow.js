@@ -5,18 +5,18 @@
 //----------------
 
 // slideshow container
-const slideshow = document.getElementById("slideshow");
+const slideshow = document.getElementById("ksh-slideshow");
 
 // slideshow animations
 let animations = {
-    imgIn : "animation__in",
-    imgOut : "animation__out",
-    pag : "animation__pagination"
+    imgIn : "ksh-animation__in",
+    imgOut : "ksh-animation__out",
+    pag : "ksh-animation__pagination"
 }
 
 // building "imgParArray" :  array of objects containing "img elements" and "pagination elements" as properties - for slideshowAbstract()
-const pagIcons = document.querySelectorAll(".pag-icons")
-const showImages = document.querySelectorAll(".show-images");
+const pagIcons = document.querySelectorAll(".ksh-pag-icons")
+const showImages = document.querySelectorAll(".ksh-show-images");
 
 let imgParArray = [];
 

@@ -8,27 +8,27 @@
   --pag-non-active: rgb(241, 241, 241);
 }
 
-.slideshow {
+.ksh-slideshow {
   max-width: var(--slideshow-max-width);
   height: var(--slideshow-height);
   margin: auto;
   overflow: hidden;
   border-radius: 20px;
 }
-.slideshow__showcase {
+.ksh-slideshow__showcase {
   position: relative;
 }
-.slideshow__showcase img {
+.ksh-slideshow__showcase img {
   position: absolute;
   width: 100%;
   transform: translateX(var(--img-distance-X));
 }
 
-.animation__in {
-  animation: in 1s forwards, out 1s var(--animation-out-delay) forwards;
+.ksh-animation__in {
+  animation: ksh-in 1s forwards, ksh-out 1s var(--animation-out-delay) forwards;
 }
 
-@keyframes out {
+@keyframes ksh-out {
   from {
     transform: translateX(0);
   }
@@ -36,7 +36,7 @@
     transform: translateX(var(--img-distance-X-minus));
   }
 }
-@keyframes in {
+@keyframes ksh-in {
   from {
     transform: translateX(var(--img-distance-X));
   }
@@ -44,22 +44,22 @@
     transform: translateX(0rem);
   }
 }
-.pagination {
+.ksh-pagination {
   text-align: center;
 }
-.pagination span {
+.ksh-pagination span {
   color: var(--pag-non-active);
   font-size: 3rem;
 }
-.pagination span:hover {
+.ksh-pagination span:hover {
   cursor: default;
 }
 
-.animation__pagination {
-  animation: pagination var(--animation-out-delay);
+.ksh-animation__pagination {
+  animation: ksh-pagination var(--animation-out-delay);
 }
 
-@keyframes pagination {
+@keyframes ksh-pagination {
   0% {
     color: var(--pag-non-active);
   }
